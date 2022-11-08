@@ -1,4 +1,5 @@
-[
+{
+  "storeItems" :[
     {
       "id": 1,
       "name": "Book",
@@ -49,4 +50,4 @@
       "img": "https://i.pinimg.com/564x/f8/00/57/f8005701d76df05ac657aaab18261858.jpg"
     }
   ]
-  
+}

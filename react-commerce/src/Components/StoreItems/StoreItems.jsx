@@ -3,12 +3,14 @@ import React from 'react'
 
 
 
-const StoreItems = (props) => {
-    const {store} = props
-  return (
-<>
+const StoreItems = () => {
+ 
+  
 
-</>
+
+  return (
+  <>
+  </>
   )
 }
 
