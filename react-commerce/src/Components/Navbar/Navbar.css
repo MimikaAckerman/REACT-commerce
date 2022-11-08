@@ -1,0 +1,25 @@
+header{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    padding: 16px;
+    background: rgb(183, 95, 24);
+}
+.cart{
+    width: 3rem;
+    height: 3rem;
+    position: relative;
+}
+.itemsCart{
+ border: 1px solid #ff3112;
+  border-radius: 20px;
+  width: 1rem;
+  height: 1.5rem;
+  background-color: #f52f24;
+  position: absolute;
+  bottom: 0;
+  right: 0; 
+ 
+
+}
