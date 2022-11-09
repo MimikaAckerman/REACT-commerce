@@ -4,7 +4,7 @@ import './App.css';
 import { BrowserRouter } from 'react-router-dom';
 
 import AppRoutes from './Routes/AppRoutes';
-import Navbar from './Components/Layout/Navbar/Navbar';
+import Navbar from './Views/Layout/Navbar/Navbar';
 
 function App()  {
 
@@ -13,13 +13,10 @@ function App()  {
 <>
 
 <BrowserRouter>
-<AppRoutes/>
 <Navbar/>
+<AppRoutes/>
+
 </BrowserRouter>
-
-
-
-
 
 
 </>

@@ -4,50 +4,50 @@
       "id": 1,
       "name": "Book",
       "price": 10.99,
-      "img": "https://i.pinimg.com/564x/55/ea/28/55ea2892884c7c95bdbdc87d47d4147a.jpg"
+      "img": "https://res.cloudinary.com/dlb6sfyiz/image/upload/v1667997701/reactProject/IMG_0564_nq0wkn.jpg"
     },
     {
       "id": 2,
       "name": "Computer",
       "price": 1199,
-      "img": "https://i.pinimg.com/564x/35/98/66/3598665b78eed8264b5043246b1ec855.jpg"
+      "img": "https://res.cloudinary.com/dlb6sfyiz/image/upload/v1667997697/reactProject/IMG_0580_kfmylr.jpg"
     },
     {
       "id": 3,
       "name": "Banana",
       "price": 1.05,
-      "img": "https://i.pinimg.com/564x/6b/67/67/6b6767eb4dc2653aa8a7d4ac558f02ce.jpg"
+      "img": "https://res.cloudinary.com/dlb6sfyiz/image/upload/v1667997694/reactProject/IMG_0523_lglkgl.jpg"
     },
     {
       "id": 4,
       "name": "Car",
       "price": 14000,
-      "img": "https://i.pinimg.com/564x/b9/64/31/b96431bd793b829843a0c4e6977b7e5c.jpg"
+      "img": "https://res.cloudinary.com/dlb6sfyiz/image/upload/v1667997660/reactProject/IMG_0527_tyxo2c.jpg"
     },
 
     {
       "id": 5,
       "name": "Car",
       "price": 14000,
-      "img": "https://i.pinimg.com/736x/77/ba/92/77ba9270f3d28119fc6460a5fc902e3f.jpg"
+      "img": "https://res.cloudinary.com/dlb6sfyiz/image/upload/v1667997653/reactProject/IMG_0481_wsgk7u.png"
     },
     {
       "id": 6,
       "name": "Car",
       "price": 14000,
-      "img": "https://i.pinimg.com/564x/7e/ad/6f/7ead6fa29c40896add51cd641ab3231e.jpg"
+      "img": "https://res.cloudinary.com/dlb6sfyiz/image/upload/v1667997648/reactProject/IMG_0475_jqnyxe.jpg"
     },
     {
       "id": 7,
       "name": "Car",
       "price": 14000,
-      "img": "https://i.pinimg.com/564x/58/10/8d/58108d21f0ce4501e958341cf20cc0d8.jpg"
+      "img": "https://res.cloudinary.com/dlb6sfyiz/image/upload/v1667997627/reactProject/IMG_0070_s7njzx.jpg"
     },
     {
       "id": 8,
       "name": "Car",
       "price": 14000,
-      "img": "https://i.pinimg.com/564x/f8/00/57/f8005701d76df05ac657aaab18261858.jpg"
+      "img": "https://res.cloudinary.com/dlb6sfyiz/image/upload/v1667997620/reactProject/297731563_597462608589622_8819049976249587844_n_xsv0hr.jpg"
     }
   ]
 }

@@ -1,5 +1,6 @@
 import { useState,useEffect } from "react"
 
+//TODO
  function getItems(){
 
     const url = 'http://localhost:8000/storeItems'
@@ -17,4 +18,4 @@ import { useState,useEffect } from "react"
     },[])
     return items
   }
-  export {getItems};
+  export {getItems}; 
