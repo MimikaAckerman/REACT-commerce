@@ -1,18 +1,10 @@
 import React from 'react';
 import './App.css';
 
+import { BrowserRouter } from 'react-router-dom';
 
-import {Route, Routes} from 'react-router-dom';
-import Home from './Pages/Home';
-import Store from './Pages/Store';
-import About from './Pages/About';
-import Navbar from './Components/Navbar/Navbar';
-
-
-
-
-
-
+import AppRoutes from './Routes/AppRoutes';
+import Navbar from './Components/Layout/Navbar/Navbar';
 
 function App()  {
 
@@ -20,18 +12,13 @@ function App()  {
   return (
 <>
 
+<BrowserRouter>
+<AppRoutes/>
 <Navbar/>
+</BrowserRouter>
 
 
 
-
-<div className='pages'>
-<Routes>
-    <Route path='/' element={<Home/>}/>
-    <Route path='/Store' element={<Store/>}/>
-    <Route path='/About' element={<About/>}/>
-</Routes >
-</div>
 
 
 
