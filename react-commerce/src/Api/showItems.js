@@ -1,7 +1,23 @@
-import { useState,useEffect } from "react"
-
 //TODO
- function getItems(){
+
+
+export const showItems = async (url) => {
+  try {
+    const response = await fetch(url)
+    const data = await response.json()
+    console.log(data,'prueba1')
+    return data
+    
+  } catch (error) {
+      console.log('error')
+  }
+}
+
+
+
+
+
+ /* function getItems(){
 
     const url = 'http://localhost:8000/storeItems'
     const[items,setItems] = useState([])
@@ -18,4 +34,4 @@ import { useState,useEffect } from "react"
     },[])
     return items
   }
-  export {getItems}; 
+  export {getItems};  */
