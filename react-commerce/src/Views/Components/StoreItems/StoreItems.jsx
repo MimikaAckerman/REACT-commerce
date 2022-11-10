@@ -1,6 +1,8 @@
 import React, { useState,useEffect } from 'react'
 import { showItems } from '../../../Api/showItems'
-import Store from '../../Pages/Store'
+
+
+import StoreCart from '../Store/StoreCart'
 
 const StoreItems = () => {
 
@@ -21,7 +23,7 @@ const StoreItems = () => {
 
   {state.map((xd) => (
     
-    <Store
+    <StoreCart
     key={xd.id}
     id={xd.id}
     name={xd.name}

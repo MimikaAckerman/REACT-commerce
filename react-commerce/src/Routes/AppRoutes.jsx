@@ -4,6 +4,8 @@ import { Routes, Route } from "react-router-dom";
 import Home from "../Views/Pages/Home";
 import Store from "../Views/Pages/Store";
 import About from "../Views/Pages/About";
+
+
 const AppRoutes = () => {
   return (
     <>
