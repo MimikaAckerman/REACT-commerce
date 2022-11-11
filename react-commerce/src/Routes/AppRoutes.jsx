@@ -2,7 +2,7 @@ import React from "react";
 
 import { Routes, Route } from "react-router-dom";
 import Home from "../Views/Pages/Home";
-import Store from "../Views/Pages/Store";
+import Cart from "../Views/Pages/Cart";
 import About from "../Views/Pages/About";
 
 
@@ -12,7 +12,7 @@ const AppRoutes = () => {
    
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Store" element={<Store />} />
+          <Route path="/Cart" element={<Cart />} />
           <Route path="/About" element={<About />} />
         </Routes>
 

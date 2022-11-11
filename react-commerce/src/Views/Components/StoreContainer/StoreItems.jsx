@@ -1,14 +1,17 @@
 import React, { useState,useEffect } from 'react'
 import { showItems } from '../../../Api/showItems'
 
-import StoreCart from '../Store/StoreCart'
+import StoreCart from '../StoreList/StoreCart'
 
 import '../../Layout/StoreItems/StoreItems.css'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const StoreItems = ({images}) => {
+
+
+
+const StoreItems = () => {
 
 //carousel
 const settings = {
@@ -49,9 +52,16 @@ const settings = {
     name={xd.name}
     price={xd.price}
     img={xd.img}
+
+  
     />
-    ))}
+    )) 
+    }
+
+
+
       </Slider>
+ 
     </div>
 
   </>
