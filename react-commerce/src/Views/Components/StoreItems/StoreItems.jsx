@@ -1,10 +1,28 @@
 import React, { useState,useEffect } from 'react'
 import { showItems } from '../../../Api/showItems'
 
-
 import StoreCart from '../Store/StoreCart'
 
-const StoreItems = () => {
+import '../../Layout/StoreItems/StoreItems.css'
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+const StoreItems = ({images}) => {
+
+//carousel
+const settings = {
+    infinite: true,
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    lazyLoad: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+};
+
+
+
 
   const [state,setState] = useState([])
   const url = ' http://localhost:8000/storeItems'
@@ -21,7 +39,9 @@ const StoreItems = () => {
   return (
   <>
 
-  {state.map((xd) => (
+    <div className="imgSlider">
+      <Slider {... settings}>
+      {state.map((xd) => (
     
     <StoreCart
     key={xd.id}
@@ -30,11 +50,10 @@ const StoreItems = () => {
     price={xd.price}
     img={xd.img}
     />
-    
     ))}
-    
-     
-    
+      </Slider>
+    </div>
+
   </>
   )
 }

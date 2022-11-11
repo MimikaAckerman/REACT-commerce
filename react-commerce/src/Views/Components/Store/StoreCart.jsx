@@ -1,20 +1,24 @@
 import React from 'react'
-import { useState } from 'react'
+import CounterApp from '../Counter/CounterApp';
+import './../../Layout/StoreCart/StoreCart.css';
+
+
 
 
 const StoreCart = (props) => {
-
   return (
     <>
-    <div>esto es StoreCart</div>
-
-
-     <div id={props.id}>
+<div id={props.id} className='container'>
+      <img src={props.img} alt={props.name} className='img'/>
       <p>{props.name}</p>
-      <img src={props.img} alt={props.name} />
       <p>{props.price}</p>
 
-    </div>
+      <CounterApp/>
+</div>
+
+
+
+     
     
     </>
   )
