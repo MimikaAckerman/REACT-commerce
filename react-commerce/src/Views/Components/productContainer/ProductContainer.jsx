@@ -3,12 +3,11 @@ import { showItems } from "../../../Api/showItems";
 
 import Products from "../Products/Products";
 
-import "../../Layout/ProductCart/ProductCart.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const ProductCart = () => {
+const ProductContainer = () => {
 
 
   //carousel
@@ -40,10 +39,10 @@ const ProductCart = () => {
     
       <div className="imgSlider">
         <Slider {...settings}>
-          {state.map((xd,id) => (
+          {state.map((product,id) => (
             <Products
               key={id}
-              {...xd}
+              {...product}
             />
           ))}
         </Slider>
@@ -52,4 +51,4 @@ const ProductCart = () => {
   );
 };
 
-export default ProductCart;
+export default ProductContainer;

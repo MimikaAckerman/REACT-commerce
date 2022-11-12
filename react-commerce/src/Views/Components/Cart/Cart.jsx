@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductCart from '../ProductCard/ProductCart';
+import ProductContainer from '../productContainer/ProductContainer';
 import UseShop from '../ShopContext/shopContext';
 
 const Cart = () => {
@@ -10,7 +10,7 @@ const Cart = () => {
       <h2>Your cart total is {total}.00$</h2>
       <div>
         {products.map((xd) =>(
-          <ProductCart {...xd} key={xd}/>
+          <ProductContainer {...xd} key={xd}/>
         ))}
       </div>
    </>

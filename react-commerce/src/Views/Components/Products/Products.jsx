@@ -15,7 +15,7 @@ const Products = ({author,img,price,id}) => {
     }else{
       setIsInCart(false)
     }
-  },[products,author]);
+  },[products,id]);
 
   const handleClick = () => {
     const product = { author,price,img };
