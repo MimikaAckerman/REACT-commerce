@@ -7,19 +7,47 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const ProductContainer = () => {
+import '../../Layout/productContainer/productContainer.css'
 
+const ProductContainer = () => {
+  const [sliderRef, setSliderRef] = useState(null)
 
   //carousel
-  const settings = {
-    infinite: true,
-    dots: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    lazyLoad: true,
-    autoplay: true,
-    autoplaySpeed: 3000,
-  };
+  var settings = {
+      dots: true,
+      // infinite: false,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      initialSlide: 0,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 580,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    };
 
   //connection
   const [state, setState] = useState([]);
@@ -36,17 +64,16 @@ const ProductContainer = () => {
 
   return (
     <>
-    
-      <div className="imgSlider">
-        <Slider {...settings}>
+     <Slider {...settings}>
+     
           {state.map((product,id) => (
             <Products
               key={id}
               {...product}
             />
           ))}
-        </Slider>
-      </div>
+          
+      </Slider>
     </>
   );
 };

@@ -11,3 +11,28 @@ body {
     width: 50%;
     height: 50%;
 }
+.border {
+    border: 2px solid green;
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    font-family: "slick";
+    font-size: 50px;
+    line-height: 1;
+    opacity: 0.75;
+    color: #170b0b;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .slick-next {
+    right: 50px;
+  }
+  .slick-prev {
+    left: 50px;
+  }
+  .slick-prev,
+  .slick-next {
+    z-index: 99999999;
+  }
+  
