@@ -36,7 +36,7 @@ const Products = ({author,img,price,id}) => {
       <p>{author}</p>
       <p>{price}.00€</p>
       <button onClick={handleClick} isInCart={isInCart}>
-        <p>{isInCart ? "reset to cart" : "add to cart"}</p>
+        <p>{isInCart ? "remove to cart" : "add to cart"}</p>
       </button>
 
     

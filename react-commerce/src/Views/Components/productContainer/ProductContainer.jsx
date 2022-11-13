@@ -6,8 +6,7 @@ import Products from "../Products/Products";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-import '../../Layout/productContainer/productContainer.css'
+import './../../Layout/productContainer/productContainer.css'
 
 const ProductContainer = () => {
   const [sliderRef, setSliderRef] = useState(null)
@@ -65,17 +64,18 @@ const ProductContainer = () => {
   return (
     <>
      <Slider {...settings}>
-     
+ 
           {state.map((product,id) => (
             <Products
               key={id}
               {...product}
             />
           ))}
-          
+     
       </Slider>
     </>
   );
 };
 
 export default ProductContainer;
+
