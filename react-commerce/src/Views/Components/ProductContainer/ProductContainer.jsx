@@ -1,14 +1,14 @@
 import React, { useState,useEffect } from 'react'
 import { showItems } from '../../../Api/showItems'
 
-import StoreCart from '../Store/StoreCart'
+import Products from '../Products/Products';
 
-import '../../Layout/StoreItems/StoreItems.css'
+import '../../Layout/productContainer/productContainer.css'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const StoreItems = ({images}) => {
+const ProductContainer = ({img}) => {
 
 //carousel
 const settings = {
@@ -43,7 +43,7 @@ const settings = {
       <Slider {... settings}>
       {state.map((xd) => (
     
-    <StoreCart
+    <Products
     key={xd.id}
     id={xd.id}
     name={xd.name}
@@ -58,4 +58,4 @@ const settings = {
   )
 }
 
-export default StoreItems
+export default ProductContainer

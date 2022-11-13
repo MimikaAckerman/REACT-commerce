@@ -7,7 +7,6 @@ import AppRoutes from './Routes/AppRoutes';
 import Navbar from './Views/Layout/Navbar/Navbar';
 
 
-import StoreItems from './Views/Components/StoreItems/StoreItems';
 function App()  {
 
 
@@ -15,10 +14,10 @@ function App()  {
 <>
 
 <BrowserRouter>
+
 <Navbar/>
 <AppRoutes/>
 
-<StoreItems/>
 
 </BrowserRouter>
 
