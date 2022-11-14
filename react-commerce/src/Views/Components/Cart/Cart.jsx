@@ -1,33 +1,33 @@
 import React from "react";
 import { useCart } from "../helper/cart-context";
- const Cart = () => {
-    const { state, dispatch } = useCart();
-    console.log(state.productName);
+const Cart = () => {
+  const { state, dispatch } = useCart();
+  console.log(state.productName);
 
-    return (
-        <div>
-            <h1>Cart</h1>
-            <h2> Items{state.counter}</h2>
-            <h2> totalAmount:{state.totalAmount}</h2>
-            {state.productName.map((itemsOfCart) => (
-                <div key={itemsOfCart.id}>
-                    <p>Products: {itemsOfCart.name}</p>
-                    <p>quantity:{itemsOfCart.quant}</p>
-                    <p>price: {itemsOfCart.price}</p>
-                    <button
-                        onClick={() =>
-                            dispatch({
-                                type: "REMOVE_FROM_CART",
-                                payload: itemsOfCart
-                            })
-                        }
-                    >
-                        Remove From Cart
-                    </button>
-                </div>
-            ))}
+  return (
+    <div>
+      <h1>Cart</h1>
+      <h2> Items{state.counter}</h2>
+      <h2> totalAmount:{state.totalAmount}</h2>
+      {state.productName.map((itemsOfCart) => (
+        <div key={itemsOfCart.id}>
+          <p>Products: {itemsOfCart.name}</p>
+          <p>quantity:{itemsOfCart.quant}</p>
+          <p>price: {itemsOfCart.price}</p>
+          <button
+            onClick={() =>
+              dispatch({
+                type: "REMOVE_FROM_CART",
+                payload: itemsOfCart,
+              })
+            }
+          >
+            Remove From Cart
+          </button>
         </div>
-    );
+      ))}
+    </div>
+  );
 };
 
 export default Cart;
