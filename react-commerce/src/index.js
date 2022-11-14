@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-
+import { CartProvider } from './Views/Components/helper/cart-context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,7 +12,10 @@ root.render(
 
 
 <React.StrictMode>
+    <CartProvider>
     <App />
+    </CartProvider>
+ 
 </React.StrictMode>
 
 

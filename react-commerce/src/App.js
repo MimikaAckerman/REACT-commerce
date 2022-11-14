@@ -14,11 +14,8 @@ function App()  {
 <>
 
 <BrowserRouter>
-
 <Navbar/>
 <AppRoutes/>
-
-
 </BrowserRouter>
 
 
