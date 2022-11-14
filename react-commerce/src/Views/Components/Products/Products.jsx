@@ -10,6 +10,7 @@ const Products = (items) => {
         <img src={items.img} alt={items.name} className="img" />
         <p>{items.name}</p>
         <p>{items.price}</p>
+        
         <button
           onClick={() =>
             dispatch({

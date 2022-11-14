@@ -1,14 +1,17 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-
 import "./../../../UI/Navbar.css";
+import { useCart } from "../../Components/helper/cart-context";
+
 const Navbar = () => {
+  const {state} = useCart();
   return (
     <>
       <div className="TopNav">
         <header>
           <h1>esto es mi navbar</h1>
+
           <Link to="/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +27,9 @@ const Navbar = () => {
               />
             </svg>
           </Link>
+
           <Link to="/Cart">
+            <h2>{state.counter}</h2>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -36,6 +41,8 @@ const Navbar = () => {
               <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z" />
             </svg>
           </Link>
+
+
           <Link to="/About">
             <svg
               xmlns="http://www.w3.org/2000/svg"

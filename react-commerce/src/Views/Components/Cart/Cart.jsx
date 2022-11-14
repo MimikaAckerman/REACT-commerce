@@ -7,7 +7,7 @@ const Cart = () => {
   return (
     <div>
       <h1>Cart</h1>
-      <h2> Items{state.counter}</h2>
+      
       <h2> totalAmount:{state.totalAmount}</h2>
       {state.productName.map((itemsOfCart) => (
         <div key={itemsOfCart.id}>
