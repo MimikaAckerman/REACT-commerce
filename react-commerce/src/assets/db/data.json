@@ -49,5 +49,14 @@
       "price": 14000,
       "img": "https://res.cloudinary.com/dlb6sfyiz/image/upload/v1667997620/reactProject/297731563_597462608589622_8819049976249587844_n_xsv0hr.jpg"
     }
+  ],
+  "Users": [
+    {
+      "id":1,
+      "name":"mimika",
+      "lastname":"ackerman",
+      "email":"mimika@gmail.com",
+      "password":12345
+    }
   ]
 }
