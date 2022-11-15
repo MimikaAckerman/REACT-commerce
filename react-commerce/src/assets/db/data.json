@@ -64,12 +64,18 @@
       "email": "mimi.misifu@hotmail.com",
       "password": "12345"
     },
-   
     {
       "id": "4aa9b8fc-5d50-4799-aab5-d7a3d5890458",
       "name": "prueba",
       "lastname": "fuck",
       "email": "koko@queso.com",
+      "password": "12345"
+    },
+    {
+      "id": "b5381ebe-a2a2-4c18-9e0a-30e90a7b29f1",
+      "name": "victor",
+      "lastname": "lopez-brea",
+      "email": "victor lopez-brea@gmail.com",
       "password": "12345"
     }
   ]
