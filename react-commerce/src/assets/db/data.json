@@ -1,5 +1,5 @@
 {
-  "storeItems" :[
+  "storeItems": [
     {
       "id": 1,
       "name": "Book",
@@ -24,7 +24,6 @@
       "price": 14000,
       "img": "https://res.cloudinary.com/dlb6sfyiz/image/upload/v1667997660/reactProject/IMG_0527_tyxo2c.jpg"
     },
-
     {
       "id": 5,
       "name": "Car",
@@ -52,11 +51,25 @@
   ],
   "Users": [
     {
-      "id":1,
-      "name":"mimika",
-      "lastname":"ackerman",
-      "email":"mimika@gmail.com",
-      "password":12345
+      "id": 1,
+      "name": "mimika",
+      "lastname": "ackerman",
+      "email": "mimika@gmail.com",
+      "password": 12345
+    },
+    {
+      "id": "368d2184-8ec6-4181-91b7-67f73c75ced3",
+      "name": "mimika",
+      "lastname": "ackerman",
+      "email": "mimi.misifu@hotmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "28d863a5-89e2-492b-ba81-32daae86ee60",
+      "name": "mimika",
+      "lastname": "ackerman",
+      "email": "mimi.misifu@hotmail.com",
+      "password": "12345"
     }
   ]
 }
