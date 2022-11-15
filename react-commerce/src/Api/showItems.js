@@ -1,6 +1,3 @@
-//TODO
-
-
 export const showItems = async (url) => {
   try {
     const response = await fetch(url)
