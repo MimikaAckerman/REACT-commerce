@@ -5,19 +5,24 @@ export const useForm = (initialForm,validateForm) => {
   const [form, setForm] = useState(initialForm);
   const [errors, setErrors] = useState({});
 
+  const [persons, setPersons] = useState([]);
+  const [newName, setNewName] = useState("");
+
+
+
   const changeInput = (e) => {
-    const formCopy = {...form};
+   /*  const formCopy = {...form};
     formCopy[e.target.name] = e.target.value;
-    setForm(formCopy);
-    /* const {name,value} = e.target
-    setState({
-      ...state,
+    setForm(formCopy); */
+
+   const {name,value} = e.target
+    setForm({
+      ...form,
       [name]:value
-    }); */
-    /* setForm({
-        ...form,
-        [e.target.name]:e.target.value
-    }) */
+    }); 
+ 
+
+  
     
   };
   console.log(form)
@@ -31,9 +36,21 @@ export const useForm = (initialForm,validateForm) => {
   const submit = (e) => {
     e.preventDefault();
     FetchUser(form)
-    alert('register complete');
+
+ 
+  if(persons.findIndex((p) => p.username == newName) !=-1){
+    alert(`${newName} is alredy register`);
+    return;
+  }
+    const persona = {
+      username: newName,
+    };
+    setPersons([...persons,persona])
+    setNewName("");
   };
 
+
+  
   return {
     form,
     errors,

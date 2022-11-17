@@ -57,55 +57,7 @@
       "email": "mimika@gmail.com",
       "password": 12345,
       "confirmPassword": 12345
-    },
-    {
-      "id": "368d2184-8ec6-4181-91b7-67f73c75ced3",
-      "username": "koko",
-      "lastname": "prueba",
-      "email": "mimi.misifu@hotmail.com",
-      "password": "12345",
-      "confirmPassword": "12345"
-    },
-    {
-      "id": "4aa9b8fc-5d50-4799-aab5-d7a3d5890458",
-      "username": "prueba",
-      "lastname": "fuck",
-      "email": "koko@queso.com",
-      "password": "12345",
-      "confirmPassword": "12345"
-    },
-    {
-      "id": "b5381ebe-a2a2-4c18-9e0a-30e90a7b29f1",
-      "username": "victor",
-      "lastname": "lopez-brea",
-      "email": "victor lopez-brea@gmail.com",
-      "password": "12345",
-      "confirmPassword": "12345"
-    },
-    {
-      "id": "71a4f891-c71a-47bb-aa2c-8962f6de18c0",
-      "username": "evelyn",
-      "lastname": "gomez",
-      "email": "evelnay@gmail.com",
-      "password": "12",
-      "confirmPassword": "12"
-    },
-    {
-      "id": "f143861b-80f9-40d9-bf1f-ee6e8b0c8f89",
-      "username": "elias",
-      "lastname": "herrera",
-      "email": "eliasherrera72@gmail.com",
-      "password": "123",
-      "confirmPassword": "123"
-    },
-    {
-      "id": "5f10fa09-7fc0-4d86-8fde-0568c7e5175b",
-      "username": "levi",
-      "lastname": "ackerman",
-      "email": "leviAckerman@gmail.com",
-      "password": "1234567",
-      "confirmPassword": "1234567"
     }
-    
+   
   ]
 }
