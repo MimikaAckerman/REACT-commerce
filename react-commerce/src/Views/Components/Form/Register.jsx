@@ -66,9 +66,6 @@ if (!form.confirmPassword.trim()) { //campos vacios
 }
 
 
-
-
-
 const Register = () => {
   const { form, changeInput, handleBlur, submit } = useForm(
     initialForm,
