@@ -1,6 +1,5 @@
 import React from "react";
-import "./../../../UI/RegisterStyle.css";
-import { useForm } from "./useFormRegister";
+import { useForm } from "./useForm";
 
 const initialForm = {
   id: "",
@@ -21,7 +20,7 @@ const validationsForm = (form) => {
   let regexPassword = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{5,8}$/;
 
   //for name
-  if(!form.name.trim()) {
+  if (!form.name.trim()) {
     errors.name = "required field";
   } else if (!regexName.test(form.name.trim())) {
     errors.name = "the field accepts only letters and blanks";
@@ -47,89 +46,67 @@ const validationsForm = (form) => {
   } else if (!regexPassword.test(form.password.trim())) {
   }
 
-  
-
   //for confirmPassword
   if (!form.confirmPassword.trim()) {
-    errors.confirmPassword ='please enter a confirm password';
+    errors.confirmPassword = "please enter a confirm password";
   }
 
   return errors;
 };
 
 const Register = () => {
-  const { form, errors, handleInput, handleBlur, handleSubmit } = useForm(
+  const { form, errors, changeInput, handleBlur, submit } = useForm(
     initialForm,
     validationsForm
   );
 
   return (
     <>
-      <br />
-      <h2>Register users</h2>
-
-      <form onSubmit={handleSubmit}>
+      <form onChange={submit}>
         <input
           type="text"
-          className="form-inputs"
-          placeholder="enter your name"
-          name="name"
-          onChange={handleInput}
-          onBlur={handleBlur}
+          name="username"
+          placeholder="enter your username"
+          onChange={changeInput}
           value={form.name}
           required
         />
-        {errors.name && <p>{errors.name}</p>}
 
         <input
           type="text"
-          className="form-inputs"
-          placeholder="enter your lastname"
           name="lastname"
-          onChange={handleInput}
-          onBlur={handleBlur}
+          placeholder="enter your lastname"
+          onChange={changeInput}
           value={form.lastname}
           required
         />
-        {errors.lastname && <p>{errors.lastname}</p>}
 
         <input
           type="email"
-          className="form-inputs"
-          placeholder="enter your email"
           name="email"
-          onChange={handleInput}
-          onBlur={handleBlur}
+          placeholder="enter your email"
+          onChange={changeInput}
           value={form.email}
           required
         />
-        {errors.email && <p>{errors.email}</p>}
-
         <input
           type="password"
-          className="form-inputs"
-          placeholder="enter your password"
           name="password"
-          onChange={handleInput}
-          onBlur={handleBlur}
+          placeholder="enter your password"
+          onChange={changeInput}
           value={form.password}
           required
         />
-        {errors.password && <p>{errors.password}</p>}
-
         <input
           type="password"
-          className="form-inputs"
-          placeholder="confirm your password"
           name="confirmPassword"
-          onChange={handleInput}
-          onBlur={handleBlur}
+          placeholder="enter confirm password"
+          onChange={changeInput}
           value={form.confirmPassword}
           required
         />
-        {errors.confirmPassword && <p>{errors.confirmPassword}</p>}
 
-        <input type="submit" className="form-inputs" />
+        <input type="submit" value="send information" />
       </form>
     </>
   );

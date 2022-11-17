@@ -5,25 +5,30 @@ export const useForm = (initialForm,validateForm) => {
   const [form, setForm] = useState(initialForm);
   const [errors, setErrors] = useState({});
 
-  const handleInput = (e) => {
-    const {name,value} = e.target
-    setForm({
-      ...form,
+  const changeInput = (e) => {
+    const formCopy = {...form};
+    formCopy[e.target.name] = e.target.value;
+    setForm(formCopy);
+    /* const {name,value} = e.target
+    setState({
+      ...state,
       [name]:value
-    });
+    }); */
     /* setForm({
         ...form,
         [e.target.name]:e.target.value
     }) */
+    
   };
+  console.log(form)
   
   const handleBlur = (e) => {
-    handleInput(e);
+    changeInput(e);
     setErrors(validateForm(form))
   };
 
 
-  const handleSubmit = (e) => {
+  const submit = (e) => {
     e.preventDefault();
     FetchUser(form)
     alert('register complete');
@@ -32,8 +37,8 @@ export const useForm = (initialForm,validateForm) => {
   return {
     form,
     errors,
-    handleInput,
+    changeInput,
     handleBlur,
-    handleSubmit,
+    submit,
   };
 };
