@@ -50,9 +50,14 @@ const validationsForm = (form) => {
   
 
   //for confirmPassword
-  if (!form.confirmPassword.trim()) {
-    errors.confirmPassword ='please enter a confirm password';
+  if (!form.confirmPassword.trim()) { //campos vacios
+    errors.confirmPassword = 'your confirm password is empty'
   }
+    if(form.confirmPassword.trim() === form.password.trim()){
+      errors.confirmPassword = 'passwords match'
+    }else{
+      errors.confirmPassword ='passwords are different'
+    }
 
   return errors;
 };
