@@ -1,7 +1,7 @@
 import React from 'react'
+import '../../design/store.css'
 
-
-const Store = (props) => {
+const Store = () => {
   return (
 <>
 <h1>page Store</h1>

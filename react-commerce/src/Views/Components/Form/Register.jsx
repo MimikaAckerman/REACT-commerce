@@ -1,30 +1,32 @@
 import React from "react";
-import "./../../../UI/RegisterStyle.css";
-import { useForm } from "./useFormRegister";
+import "../../../design/RegisterStyle.css";
+/* import { useForm } from "./useFormRegister"; */
+import { useFormRegister } from "./useFormRegister";
+import { fetchUsers } from "../../../Api/fetchUsers";
+import { useEffect, useState } from "react";
 
 const initialForm = {
   id: "",
-  name: "",
+  username: "",
   lastname: "",
   email: "",
   password: "",
   confirmPassword: "",
 };
 
+let errors = {};
 const validationsForm = (form) => {
-  let errors = {};
-
   //regular expressions
-  let regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
+  let regexUsername = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
   let regexLastname = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
   let regexEmail = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/;
   let regexPassword = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{5,8}$/;
 
   //for name
-  if(!form.name.trim()) {
-    errors.name = "required field";
-  } else if (!regexName.test(form.name.trim())) {
-    errors.name = "the field accepts only letters and blanks";
+  if (!form.username.trim()) {
+    errors.username = "required field";
+  } else if (!regexUsername.test(form.username.trim())) {
+    errors.username = "the field accepts only letters and blanks";
   }
 
   //for lastname
@@ -47,26 +49,37 @@ const validationsForm = (form) => {
   } else if (!regexPassword.test(form.password.trim())) {
   }
 
-  
-
   //for confirmPassword
-  if (!form.confirmPassword.trim()) { //campos vacios
-    errors.confirmPassword = 'your confirm password is empty'
+  if (!form.confirmPassword.trim()) {
+    //campos vacios
+    errors.confirmPassword = "your confirm password is empty";
   }
-    if(form.confirmPassword.trim() === form.password.trim()){
-      errors.confirmPassword = 'passwords match'
-    }else{
-      errors.confirmPassword ='passwords are different'
-    }
+  if (form.confirmPassword.trim() === form.password.trim()) {
+    errors.confirmPassword = "passwords match";
+  } else {
+    errors.confirmPassword = "passwords are different";
+  }
 
   return errors;
 };
 
 const Register = () => {
-  const { form, errors, handleInput, handleBlur, handleSubmit } = useForm(
+  const { form, handleInput, handleBlur, handleSubmit } = useFormRegister(
     initialForm,
     validationsForm
   );
+
+  const [state, setState] = useState([]);
+  const url = " http://localhost:8000/Users";
+
+  useEffect(() => {
+    const connection = async () => {
+      const data = await fetchUsers(url);
+      setState(data);
+      console.log(state, "REGISTER");
+    };
+    connection();
+  }, [url]);
 
   return (
     <>
@@ -77,20 +90,20 @@ const Register = () => {
         <input
           type="text"
           className="form-inputs"
-          placeholder="enter your name"
-          name="name"
+          name="username"
+          placeholder="enter your username"
           onChange={handleInput}
           onBlur={handleBlur}
-          value={form.name}
+          value={form.username}
           required
         />
-        {errors.name && <p>{errors.name}</p>}
+        {errors.username && <p>{errors.username}</p>}
 
         <input
           type="text"
           className="form-inputs"
-          placeholder="enter your lastname"
           name="lastname"
+          placeholder="enter your lastname"
           onChange={handleInput}
           onBlur={handleBlur}
           value={form.lastname}
@@ -101,20 +114,19 @@ const Register = () => {
         <input
           type="email"
           className="form-inputs"
-          placeholder="enter your email"
           name="email"
+          placeholder="enter your email"
           onChange={handleInput}
           onBlur={handleBlur}
           value={form.email}
           required
         />
         {errors.email && <p>{errors.email}</p>}
-
         <input
           type="password"
           className="form-inputs"
-          placeholder="enter your password"
           name="password"
+          placeholder="enter your password"
           onChange={handleInput}
           onBlur={handleBlur}
           value={form.password}
@@ -125,8 +137,8 @@ const Register = () => {
         <input
           type="password"
           className="form-inputs"
-          placeholder="confirm your password"
           name="confirmPassword"
+          placeholder="enter confirm password"
           onChange={handleInput}
           onBlur={handleBlur}
           value={form.confirmPassword}
@@ -134,7 +146,7 @@ const Register = () => {
         />
         {errors.confirmPassword && <p>{errors.confirmPassword}</p>}
 
-        <input type="submit" className="form-inputs" />
+        <input type="submit" value="send information" />
       </form>
     </>
   );

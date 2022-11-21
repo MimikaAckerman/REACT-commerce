@@ -1,32 +1,30 @@
 import { useState } from "react";
-import FetchUser from "../../../Api/FetchUser";
+import fetchCreateUsers from "../../../Api/fetchCreateUsers";
 
-export const useForm = (initialForm,validateForm) => {
+export const useFormRegister = (initialForm, validateForm) => {
   const [form, setForm] = useState(initialForm);
   const [errors, setErrors] = useState({});
 
   const handleInput = (e) => {
-    const {name,value} = e.target
+    const { name, value } = e.target;
     setForm({
       ...form,
-      [name]:value
+      [name]: value,
     });
     /* setForm({
         ...form,
         [e.target.name]:e.target.value
     }) */
   };
-  
+
   const handleBlur = (e) => {
     handleInput(e);
-    setErrors(validateForm(form))
+    setErrors(validateForm(form));
   };
-
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    FetchUser(form)
-    alert('register complete');
+    fetchCreateUsers(form);
   };
 
   return {

@@ -59,20 +59,20 @@
       "confirmPassword": 12345
     },
     {
-      "id": "f2e8a02f-a4df-43f9-bf52-c0de8528cb55",
-      "name": "levi",
+      "id": "af06acfb-0c51-48bd-99be-35740491bcbf",
+      "username": "levi",
       "lastname": "ackerman",
       "email": "leviAckerman@gmail.com",
-      "password": "123",
-      "confirmPassword": "123"
-    },
-    {
-      "id": "119b2c7b-6c22-435d-9ca8-4805b7fac009",
-      "name": "victor",
-      "lastname": "lopez",
-      "email": "victorlopezbrea@gmail.com",
       "password": "12",
       "confirmPassword": "12"
+    },
+    {
+      "id": "3be03d4c-8f7a-4af4-a3aa-a06415395c69",
+      "username": "victor",
+      "lastname": "lopez-brea",
+      "email": "victorlopezbrea@gmail.com",
+      "password": "123",
+      "confirmPassword": "123"
     }
   ]
 }
