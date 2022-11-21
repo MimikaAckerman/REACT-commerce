@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 
 
-import { CartProvider } from './Views/Components/helper/cart-context';
+import { CartProvider } from './context/cart-context.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

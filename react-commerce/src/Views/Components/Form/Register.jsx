@@ -2,7 +2,7 @@ import React from "react";
 import "../../../design/RegisterStyle.css";
 /* import { useForm } from "./useFormRegister"; */
 import { useFormRegister } from "./useFormRegister";
-
+import './../../../design/RegisterStyle.css'
 
 const initialForm = {
   id: "",
@@ -78,9 +78,12 @@ const Register = () => {
   return (
     <>
       <br />
-      <h2>Register users</h2>
-
-      <form onSubmit={handleSubmit}>
+     <div className="container">
+      <div className="contact-box">
+<div className="left"></div>
+<div className="right">
+<h2>Register</h2>
+<form onSubmit={handleSubmit}>
         <input
           type="text"
           className="form-inputs"
@@ -140,8 +143,14 @@ const Register = () => {
         />
         {errors.confirmPassword && <p>{errors.confirmPassword}</p>}
 
-        <input type="submit" value="send information" />
+        <input type="submit" value="send information" className="btn-submit" />
       </form>
+
+</div>
+      </div>
+     </div>
+
+      
     </>
   );
 };

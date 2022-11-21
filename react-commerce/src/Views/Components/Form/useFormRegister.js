@@ -49,10 +49,10 @@ console.log(users)
 
     });
     if(userExist.includes(true)){
-console.log('existe el usuario');
+console.log('user exist');
     }else{
       fetchCreateUsers(form);
-      console.log('no existe');
+      console.log('user not exist');
      window.location.replace('/Home')
     }
 

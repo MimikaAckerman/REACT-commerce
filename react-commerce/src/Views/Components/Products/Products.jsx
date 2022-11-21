@@ -1,4 +1,4 @@
-import { useCart } from "../helper/cart-context";
+import { useCart } from "../../../context/cart-context";
 import React from "react";
 import '../../../design/products.css'
 
