@@ -3,11 +3,12 @@ export const fetchUsers = async(url) =>{
 
   try {
     const response = await fetch(url);
-    const data = await response.json()
-    console.log(data,'fetchUser')
+    return  await response.json()
+    
   } catch (error) {
     console.log('something wrong');
   }
+
 
 }
 

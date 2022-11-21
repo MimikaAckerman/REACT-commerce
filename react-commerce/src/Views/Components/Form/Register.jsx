@@ -2,8 +2,7 @@ import React from "react";
 import "../../../design/RegisterStyle.css";
 /* import { useForm } from "./useFormRegister"; */
 import { useFormRegister } from "./useFormRegister";
-import { fetchUsers } from "../../../Api/fetchUsers";
-import { useEffect, useState } from "react";
+
 
 const initialForm = {
   id: "",
@@ -69,19 +68,11 @@ const Register = () => {
     validationsForm
   );
 
-  const [state, setState] = useState([]);
-  const url = " http://localhost:8000/Users";
+ 
 
-  useEffect(() => {
-    const connection = async () => {
-      const data = await fetchUsers(url);
-      setState(data);
-      console.log(state, "REGISTER");
-    };
-    connection();
-  }, [url]);
 
-  
+
+
 
 
   return (
