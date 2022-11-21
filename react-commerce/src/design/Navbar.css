@@ -1,84 +1,44 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 30px;
-  overflow-x: hidden;
-}
-
-.navMenu {
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: space-between;
-  padding: 16px;
-  background: grey;
-}
-.navMenu a {
-  color: #f6f4e6;
-  text-decoration: none;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  font-weight: 500;
-  display: inline-block;
-  width: 80px;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-.navMenu a:hover {
-  color: #fddb3a;
-}
-
-.navMenu .dot {
-  width: 6px;
-  height: 6px;
-  background: #fddb3a;
-  border-radius: 50%;
-  opacity: 0;
-  -webkit-transform: translateX(30px);
-  transform: translateX(30px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-.navMenu a:nth-child(1):hover ~ .dot {
-  -webkit-transform: translateX(30px);
-  transform: translateX(30px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  opacity: 1;
-}
-
-.navMenu a:nth-child(2):hover ~ .dot {
-  -webkit-transform: translateX(110px);
-  transform: translateX(110px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  opacity: 1;
-}
-
-.navMenu a:nth-child(3):hover ~ .dot {
-  -webkit-transform: translateX(200px);
-  transform: translateX(200px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  opacity: 1;
-}
-
-.navMenu a:nth-child(4):hover ~ .dot {
-  -webkit-transform: translateX(285px);
-  transform: translateX(285px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  opacity: 1;
-}
+header{
+    margin:0 auto;
+    width:auto;
+    height:230px;
+   
+    cursor: pointer;
+  }
+  .nav{
+    width:200px;
+    height:230px;
+    float:left;
+  }
+  #one{
+    background-color: rgb(208,101,3);
+  }
+  #two{
+    background-color: rgb(233,147,26);
+  }
+  #three{
+    background-color: rgb(22,145,190);
+  }
+  #four{
+    background-color: rgb(22,107,162);
+  }
+  
+  
+  
+  .text{
+    text-align:center;
+    color:white;
+    font-size:1.2em;
+    padding-top:10px;
+    opacity:.6;
+    -WebKit-transition:padding-top .4s
+  }
+  .nav:hover{
+    height:250px;
+    -WebKit-transition:height .4s
+  }
+  .nav:hover .text{
+    padding-top:30px;
+    opacity: 1;
+  }
+  
