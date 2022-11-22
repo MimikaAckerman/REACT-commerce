@@ -72,18 +72,32 @@ const Register = () => {
 
 
 
-
-
-
   return (
     <>
-      <br />
+
+
+
+    {/*   <br />
      <div className="container">
       <div className="contact-box">
 <div className="left"></div>
 <div className="right">
-<h2>Register</h2>
-<form onSubmit={handleSubmit}>
+<h2>Register</h2>  */} 
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  REGISTER
+</button>
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Register user</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           className="form-inputs"
@@ -146,10 +160,32 @@ const Register = () => {
         <input type="submit" value="send information" className="btn-submit" />
       </form>
 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* </div>
       </div>
      </div>
-
+ */}
       
     </>
   );

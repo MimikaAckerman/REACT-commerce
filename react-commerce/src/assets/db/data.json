@@ -89,6 +89,14 @@
       "email": "drogo@gmail.com",
       "password": "12",
       "confirmPassword": "12"
+    },
+    {
+      "id": "da7015e1-a422-4ce7-a5eb-b9cfadda8525",
+      "username": "elias",
+      "lastname": "herrera",
+      "email": "eliasherrera72@gmail.com",
+      "password": "12",
+      "confirmPassword": "12"
     }
   ]
 }

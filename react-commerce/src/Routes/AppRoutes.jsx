@@ -6,13 +6,13 @@ import Cart from "../Views/Components/Cart/Cart";
 import About from "../Views/Pages/About";
 
 import ProductContainer from "../Views/Components/ProductContainer/ProductContainer";
-import Navbar from "./../Views/Layout/Navbar/Navbar";
+ import Navbar from "./../Views/Layout/Navbar/Navbar"; 
 
 const AppRoutes = () => {
   return (
     <>
       <BrowserRouter>
-        <Navbar />
+        <Navbar /> 
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Store" element={<ProductContainer />} />

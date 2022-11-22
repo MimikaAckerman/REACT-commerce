@@ -1,9 +1,10 @@
 import React from "react";
 import "./App.css";
 import AppRoutes from "./Routes/AppRoutes";
-import Login from "./Views/Components/Form/Login";
-
+import LoginPage from "./Views/Components/Form/LoginPage";
 import Register from "./Views/Components/Form/Register";
+
+import { LoginProvider } from "./context";
 
 
 function App() {
@@ -12,9 +13,13 @@ function App() {
 
   return (
     <>
+     <LoginProvider>
       <AppRoutes />
+   
       <Register/>
-     <Login/>
+     <LoginPage/>
+
+     </LoginProvider>
     </>
   );
 }

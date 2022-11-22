@@ -2,6 +2,7 @@ import { useState } from "react";
 import fetchCreateUsers from "../../../Api/fetchCreateUsers";
 import { useEffect } from "react";
 import { fetchUsers } from "../../../Api/fetchUsers";
+/* import { Navigate } from "react-router-dom"; */
 
 export const useFormRegister = (initialForm, validateForm) => {
   const [form, setForm] = useState(initialForm);
@@ -35,7 +36,7 @@ export const useFormRegister = (initialForm, validateForm) => {
     connection();
   }, [url]);
 
-console.log(users)
+/* console.log(users) */
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -53,7 +54,8 @@ console.log('user exist');
     }else{
       fetchCreateUsers(form);
       console.log('user not exist');
-     window.location.replace('/Home')
+    /*  Navigate('/Home') */
+    window.location.replace('/Home')
     }
 
     
