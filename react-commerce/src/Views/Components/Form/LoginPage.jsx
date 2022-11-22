@@ -1,6 +1,6 @@
 import React from "react";
 import { useContext } from "react";
-/* import { useNavigate } from "react-router-dom"; */
+import { useNavigate } from "react-router-dom";
 import { LoginContext } from "../../../context/LoginContext";
 
 import { fetchUsers } from "../../../Api/fetchUsers";
@@ -21,24 +21,11 @@ const LoginPage = () => {
   }, [url]);
 
   const onLogin = () => {
-    const userExist = users.map((user) => {
-      if (user.username === login.username) {
-        return true;
-      } else {
-        return false;
-      }
-    });
-    if (userExist.includes(true)) {
-      console.log("user exist");
-      login("mimika ackerman");
-    } else {
-      console.log("user not exist");
-      window.location.replace("./Home");
-    }
+    login("mimika ackerman");
 
-    /*  useNavigate("/" ,{
-    replace:true,
-  }); */
+    useNavigate("/", {
+      replace: true,
+    });
   };
 
   return (
