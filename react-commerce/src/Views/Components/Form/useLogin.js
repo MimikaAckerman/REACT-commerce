@@ -3,7 +3,7 @@ import { fetchUsers } from "../../../Api/fetchUsers";
 
 export async function useLogin({ username, password }) {
     return new Promise((resolve, reject) => {
-      setTimeout(() => {
+      
 
       
 
@@ -13,7 +13,8 @@ export async function useLogin({ username, password }) {
         } else {
           reject();
         }
-      }, 1000);
+     
+        
     });
   }
   
