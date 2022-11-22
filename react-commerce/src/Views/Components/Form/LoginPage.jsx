@@ -6,19 +6,12 @@ import { LoginContext } from "../../../context/LoginContext";
 import { fetchUsers } from "../../../Api/fetchUsers";
 import { useState, useEffect } from "react";
 
+
+
+
 const LoginPage = () => {
   const { login } = useContext(LoginContext);
 
-  const [users, setUsers] = useState([]);
-  const url = " http://localhost:8000/Users";
-
-  useEffect(() => {
-    const connection = async () => {
-      const data = await fetchUsers(url);
-      setUsers(data);
-    };
-    connection();
-  }, [url]);
 
   const onLogin = () => {
     login("mimika ackerman");
