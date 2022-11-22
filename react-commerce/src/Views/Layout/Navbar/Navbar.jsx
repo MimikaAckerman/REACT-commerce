@@ -1,29 +1,19 @@
 import React from "react";
 
-import { Link, useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 import "../../../design/Navbar.css";
 import { useCart } from "../../../context/cart-context";
 
-import { LoginContext } from "../../../context";
-import { useContext } from "react";
+
 
 
 
 const Navbar = () => {
 
   const { state } = useCart();
-  const {user,logout} = useContext(LoginContext)
-  console.log(user)
 
-const navigate = useNavigate()
 
-  const onLogout = ()=>{
-    logout();
 
-    navigate('/Home', {
-      replace: true,
-    });
-  };
   
  
 
@@ -42,14 +32,6 @@ const navigate = useNavigate()
   return (
     <>
       <header>
-        <div className="welcome">
-        <h1>
-        {user ? `Welcome back, ${user.username}` : null}
-        </h1>
-        <button onClick={onLogout}>logout</button>
-
-
-        </div>
         <div className="nav" id="one">
           <p className="text" />HOME
 

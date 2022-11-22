@@ -1,19 +1,42 @@
-
-import { types } from "../types/types";
-export const LoginReducer = (state = {}, action) => {
+export const LoginReducer = (state,action){
     switch (action.type) {
-        case types.login:
+        case "field": {
           return {
             ...state,
-            isLogged: true,
-            user: action.payload
+            [action.field]: action.value
           };
-        case types.logout:
+        }
+        case "login": {
           return {
             ...state,
-            isLogged: false
+            isLoading: true,
+            error: false
           };
-        default:
+        }
+        case "success": {
+          return {
+            ...state,
+            isLoggedIn: true,
+            isLoading: false
+          };
+        }
+        case "error": {
+          return {
+            ...state,
+            error: action.payload,
+            isLoading: false
+          };
+        }
+        case "logout": {
+          return {
+            ...state,
+            isLoggedIn: false,
+            username: "",
+            password: ""
+          };
+        }
+        default: {
           return state;
-      }
-};
+        }
+      }   
+}
