@@ -39,7 +39,7 @@ const Login = () => {
     e.preventDefault();
     dispatch({ type: "login" });
 
-    try {
+    
       /* await useLogin({ username, password }); */
 
       const userExist = users.map((user) => {
@@ -52,10 +52,13 @@ const Login = () => {
       if(userExist.includes(true)){
         dispatch({ type: "success" });
         console.log('successfully')
+      }else{
+        dispatch({ type: "error", payload: "wrong username or password" });
+        console.log('unsuccessful')
       }
-    } catch (error) {
-      dispatch({ type: "error", payload: "wrong username or password" });
-    }
+   
+      
+    
   };
  
 

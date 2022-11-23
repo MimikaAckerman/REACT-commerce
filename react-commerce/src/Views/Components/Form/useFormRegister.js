@@ -42,7 +42,7 @@ export const useFormRegister = (initialForm, validateForm) => {
     e.preventDefault();
 
    const userExist = users.map((user) => {
-      if(user.email === form.email){
+      if(user.username === form.username){
         return true;
       }else{
         return false;

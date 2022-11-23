@@ -65,38 +65,7 @@
       "email": "leviAckerman@gmail.com",
       "password": "12",
       "confirmPassword": "12"
-    },
-    {
-      "id": "3be03d4c-8f7a-4af4-a3aa-a06415395c69",
-      "username": "victor",
-      "lastname": "lopez-brea",
-      "email": "victorlopezbrea@gmail.com",
-      "password": "123",
-      "confirmPassword": "123"
-    },
-    {
-      "id": "f1899f22-4d46-44f9-8dfc-2c5c99873865",
-      "username": "alejandro",
-      "lastname": "xd",
-      "email": "alejandroxd@gmail.com",
-      "password": "12",
-      "confirmPassword": "12"
-    },
-    {
-      "id": "a483d8ec-c9e2-41de-961c-57b8b4043935",
-      "username": "drogo",
-      "lastname": "xd",
-      "email": "drogo@gmail.com",
-      "password": "12",
-      "confirmPassword": "12"
-    },
-    {
-      "id": "da7015e1-a422-4ce7-a5eb-b9cfadda8525",
-      "username": "elias",
-      "lastname": "herrera",
-      "email": "eliasherrera72@gmail.com",
-      "password": "12",
-      "confirmPassword": "12"
     }
+    
   ]
 }
