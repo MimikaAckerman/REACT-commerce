@@ -25,18 +25,23 @@ const ProductContainer = () => {
       </div>
     );
   };
-  const [imgIndex, setImgIndex] = useState(0);
+
 
   const settings = {
+
     infinite: true,
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     lazyLoad: true,
-    speed: 300,
-    slidesToShow: 3,
-    centerMode: true,
-    centerPadding: 0,
+    autoplay: true,
+    autoplaySpeed: 3000,
+
+
+
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
-    beforeChange: (current, next) => setImgIndex(next),
+    
   };
 
   const [state, setState] = useState([]);
@@ -58,7 +63,7 @@ const ProductContainer = () => {
           {state.map((xd) => (
             <Products
               key={xd.id }
-              id={xd.id === imgIndex ? "slide activeSlide" : "slide"}
+              id={xd.id }
               name={xd.name}
               price={xd.price}
               img={xd.img}

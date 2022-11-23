@@ -9,11 +9,15 @@
 .prev {
   left: 0%;
   top: 50%;
+  
 }
 
 .arrow {
   background-color: #fff;
   position: absolute;
-  cursor: pointer;
+ margin-left: 20vh;
   z-index: 10;
+}
+.imgSlider{
+  background-color: red;
 }

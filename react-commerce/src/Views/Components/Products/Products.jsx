@@ -7,7 +7,7 @@ const Products = (items) => {
 
   return (
     <>
-      <div className="container">
+  
         <div id={items.id} className="carousel">
           <img src={items.img} alt={items.name} className="carousel-img" />
 
@@ -30,7 +30,7 @@ const Products = (items) => {
             </button>
           
         </div>
-      </div>
+     
     </>
   );
 };
