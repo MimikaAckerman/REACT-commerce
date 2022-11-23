@@ -2,7 +2,11 @@ import React from "react";
 import "../../../design/RegisterStyle.css";
 /* import { useForm } from "./useFormRegister"; */
 import { useFormRegister } from "./useFormRegister";
-import './../../../design/RegisterStyle.css'
+import "./../../../design/RegisterStyle.css";
+
+import { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 
 const initialForm = {
   id: "",
@@ -68,125 +72,120 @@ const Register = () => {
     validationsForm
   );
 
- 
+  const [show, setShow] = useState(false);
 
-
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   return (
     <>
-
-
-
-    {/*   <br />
-     <div className="container">
-      <div className="contact-box">
-<div className="left"></div>
-<div className="right">
-<h2>Register</h2>  */} 
-
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  REGISTER
-</button>
-
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Register user</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div className="btn-register">
+        <Button variant="info" onClick={handleShow}>
+          Register User
+        </Button>
       </div>
-      <div class="modal-body">
-        
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          className="form-inputs"
-          name="username"
-          placeholder="enter your username"
-          onChange={handleInput}
-          onBlur={handleBlur}
-          value={form.username}
-          required
-        />
-        {errors.username && <p>{errors.username}</p>}
 
-        <input
-          type="text"
-          className="form-inputs"
-          name="lastname"
-          placeholder="enter your lastname"
-          onChange={handleInput}
-          onBlur={handleBlur}
-          value={form.lastname}
-          required
-        />
-        {errors.lastname && <p>{errors.lastname}</p>}
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Body>
+          <div className="container">
+            <div className="contact-box">
+              <div className="left"></div>
+              <div className="right">
+                <h2>Register User</h2>
+                <form onSubmit={handleSubmit}>
+                  <input
+                    type="text"
+                    className="form-inputs"
+                    name="username"
+                    placeholder="enter your username"
+                    onChange={handleInput}
+                    onBlur={handleBlur}
+                    value={form.username}
+                    required
+                  />
+                  <div className="form-errors">
+                    {errors.username && <p>{errors.username}</p>}
+                  </div>
 
-        <input
-          type="email"
-          className="form-inputs"
-          name="email"
-          placeholder="enter your email"
-          onChange={handleInput}
-          onBlur={handleBlur}
-          value={form.email}
-          required
-        />
-        {errors.email && <p>{errors.email}</p>}
-        <input
-          type="password"
-          className="form-inputs"
-          name="password"
-          placeholder="enter your password"
-          onChange={handleInput}
-          onBlur={handleBlur}
-          value={form.password}
-          required
-        />
-        {errors.password && <p>{errors.password}</p>}
+                  <input
+                    type="text"
+                    className="form-inputs"
+                    name="lastname"
+                    placeholder="enter your lastname"
+                    onChange={handleInput}
+                    onBlur={handleBlur}
+                    value={form.lastname}
+                    required
+                  />
+                  <div className="form-errors">
+                    {errors.lastname && <p>{errors.lastname}</p>}
+                  </div>
 
-        <input
-          type="password"
-          className="form-inputs"
-          name="confirmPassword"
-          placeholder="enter confirm password"
-          onChange={handleInput}
-          onBlur={handleBlur}
-          value={form.confirmPassword}
-          required
-        />
-        {errors.confirmPassword && <p>{errors.confirmPassword}</p>}
+                  <input
+                    type="email"
+                    className="form-inputs"
+                    name="email"
+                    placeholder="enter your email"
+                    onChange={handleInput}
+                    onBlur={handleBlur}
+                    value={form.email}
+                    required
+                  />
 
-        <input type="submit" value="send information" className="btn-submit" />
-      </form>
+                  <div className="form-errors">
+                    {errors.email && <p>{errors.email}</p>}
+                  </div>
 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        
-      </div>
-    </div>
-  </div>
-</div>
+                  <input
+                    type="password"
+                    className="form-inputs"
+                    name="password"
+                    placeholder="enter your password"
+                    onChange={handleInput}
+                    onBlur={handleBlur}
+                    value={form.password}
+                    required
+                  />
+                  <div className="form-errors">
+                    {errors.password && <p>{errors.password}</p>}
+                  </div>
 
+                  <input
+                    type="password"
+                    className="form-inputs"
+                    name="confirmPassword"
+                    placeholder="enter confirm password"
+                    onChange={handleInput}
+                    onBlur={handleBlur}
+                    value={form.confirmPassword}
+                    required
+                  />
 
+                  <div className="form-errors">
+                    {errors.confirmPassword && <p>{errors.confirmPassword}</p>}
+                  </div>
 
+                  <input
+                    type="submit"
+                    value="Register user"
+                    className="btn-submit"
+                  />
+                </form>
+              </div>
+            </div>
+          </div>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="info" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
 
-
-
-
-
-
-
-
-
-
-
-{/* </div>
+      {/* </div>
       </div>
      </div>
  */}
-      
     </>
   );
 };

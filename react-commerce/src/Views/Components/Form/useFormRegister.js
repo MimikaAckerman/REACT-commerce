@@ -2,7 +2,9 @@ import { useState } from "react";
 import fetchCreateUsers from "../../../Api/fetchCreateUsers";
 import { useEffect } from "react";
 import { fetchUsers } from "../../../Api/fetchUsers";
-/* import { Navigate } from "react-router-dom"; */
+
+
+
 
 export const useFormRegister = (initialForm, validateForm) => {
   const [form, setForm] = useState(initialForm);
@@ -38,8 +40,12 @@ export const useFormRegister = (initialForm, validateForm) => {
 
 /* console.log(users) */
 
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+  
 
    const userExist = users.map((user) => {
       if(user.username === form.username){
@@ -50,14 +56,16 @@ export const useFormRegister = (initialForm, validateForm) => {
 
     });
     if(userExist.includes(true)){
-console.log('user exist');
+      console.log('user exist');
+      window.location.replace('/') 
     }else{
       fetchCreateUsers(form);
       console.log('user not exist');
-    /*  Navigate('/Home') */
-    window.location.replace('/Home')
+  
+     /*  Navigate('/Home')  */
+     //TODO usar el navigate o use navigate
+ window.location.replace('/') 
     }
-
     
   };
 

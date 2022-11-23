@@ -1,15 +1,14 @@
-import React from 'react'
+import React from "react";
+import Footer from "../Layout/Footer/Footer";
 
 const Home = () => {
-
-
-
-  
   return (
-   <>
-   <h1>WELCOME USER</h1>
-   </>
-  )
-}
+    <>
+      <div className="forms">
+        <Footer />
+      </div>
+    </>
+  );
+};
 
-export default Home
+export default Home;
