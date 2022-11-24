@@ -3,33 +3,17 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../../../design/Navbar.css";
 import { useCart } from "../../../context/cart-context";
-import Login from "../../Components/Form/Login";
 
-/* 
-import { useContext } from "react";
-import { LoginContext } from "../../../context/LoginContext"; */
+
+import { LoginContext } from "../../../context";
 
 const Navbar = () => {
   const { state } = useCart();
-  /* const {user,logout} = useContext(LoginContext)
-
-
-const navigate = useNavigate();
-
-  const onLogout = () =>{
-    logout();
-
-  navigate('/Home' ,{
-    replace:true,
-  });
-    
-  }; */
+  
 
   return (
     <>
-      <div className="login">
-        <Login />
-      </div>
+     
 
       <header>
         {/*  <span>

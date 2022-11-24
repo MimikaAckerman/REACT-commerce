@@ -28,13 +28,18 @@ const ProductContainer = () => {
 
 
   const settings = {
-
+    className:'center',
+    centerMode:true,
+    focusOnSelect:true,
     infinite: true,
+    centerPadding:'100px',
+    slidesToShow: 2,
+    speed:500,
+    autoplay: true,
+
     dots: true,
-    slidesToShow: 1,
     slidesToScroll: 1,
     lazyLoad: true,
-    autoplay: true,
     autoplaySpeed: 3000,
 
 
