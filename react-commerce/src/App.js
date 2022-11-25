@@ -16,8 +16,8 @@ function App() {
      <LoginProvider>
       <AppRoutes />
    
-      <Register/>
-     <LoginPage/>
+    
+
 
      </LoginProvider>
     </>

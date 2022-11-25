@@ -17,7 +17,7 @@ export const LoginProvider = ({ children }) => {
 
   const login = (username = "") => {
     const user = {
-      id: 1,
+     
       username,
     };
 
