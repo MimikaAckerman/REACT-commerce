@@ -1,11 +1,10 @@
 import React from "react";
 
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../../../design/Navbar.css";
 import { useCart } from "../../../context/cart-context";
 
 
-import { LoginContext } from "../../../context";
 
 const Navbar = () => {
   const { state } = useCart();
