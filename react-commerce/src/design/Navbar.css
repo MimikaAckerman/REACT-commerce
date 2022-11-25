@@ -1,8 +1,44 @@
+.welcome{
+  margin-top: 2vh;
+  position: absolute;
+  margin-left: 185vh;
+}
+button{
+  /* Variables */
+ --button_radius: 0.75em;
+ --button_color: #e8e8e8;
+ --button_outline_color: #000000;
+ font-size: 17px;
+ font-weight: bold;
+ border: none;
+ border-radius: var(--button_radius);
+ background: var(--button_outline_color);
+}
+.button_top{
+ display: block;
+ box-sizing: border-box;
+ border: 2px solid var(--button_outline_color);
+ border-radius: var(--button_radius);
+ padding: 0.75em 1.5em;
+ background: var(--button_color);
+ color: var(--button_outline_color);
+ transform: translateY(-0.2em);
+ transition: transform 0.1s ease;
+}
+button:hover .button_top {
+  /* Pull the button upwards when hovered */
+ transform: translateY(-0.33em);
+}
+
+button:active .button_top {
+  /* Push the button downwards when pressed */
+ transform: translateY(0);
+}
+
 header {
   margin: 0 auto;
   width: auto;
   height: 230px;
-  cursor: pointer;
   margin-left: 20vh;
 }
 .nav {
@@ -32,11 +68,11 @@ header {
   font-size: 1.2em;
   padding-top: 10px;
   opacity: 0.6;
-  -webkit-transition: padding-top 0.4s;
+
 }
 .nav:hover {
-  height: 250px;
-  -webkit-transition: height 0.4s;
+  height: 120px;
+
 }
 .nav:hover .text {
   padding-top: 30px;

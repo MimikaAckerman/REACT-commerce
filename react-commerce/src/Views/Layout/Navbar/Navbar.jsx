@@ -20,7 +20,7 @@ const navigate = useNavigate()
   const onLogout = ()=>{
     logout();
 
-    navigate('/Home', {
+    navigate('/', {
       replace: true,
     });
   };
@@ -31,16 +31,17 @@ const navigate = useNavigate()
 
   return (
     <>
-      <header>
-        <div className="welcome">
+    <div className="welcome">
         <h1>
         {user ? `Welcome back, ${user.username}` : null}
         </h1>
-        <button onClick={onLogout}>logout</button>
+        <button className="button_top" onClick={onLogout}>logout</button>
 
 
         </div>
 
+      <header>
+        
         <div className="nav" id="one">
           <Link to="/">
             <svg

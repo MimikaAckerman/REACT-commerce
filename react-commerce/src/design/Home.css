@@ -59,7 +59,7 @@ p {
   width: 35%;
   height: 100%;
   left: 12%;
-  background: linear-gradient(to bottom right,#B0DB7D 40%,#99DBB4 100%);
+  background: linear-gradient(to bottom right,red 40%,orange 100%);
   border-radius: 20px;
   box-shadow: 5px 5px 20px rgba(gray, 10%);
   perspective: 40px;
