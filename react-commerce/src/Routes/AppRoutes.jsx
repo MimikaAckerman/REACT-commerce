@@ -8,13 +8,17 @@ import About from "../Views/Pages/About";
 import ProductContainer from "../Views/Components/ProductContainer/ProductContainer";
  import Navbar from "./../Views/Layout/Navbar/Navbar"; 
 
+
+
 const AppRoutes = () => {
   return (
     <>
       <BrowserRouter>
         <Navbar /> 
+        
         <Routes>
-          <Route path="/" element={<Home />} />
+        
+          <Route path="/" element={<Home/>} />
           <Route path="/Store" element={<ProductContainer />} />
           <Route path="/Cart" element={<Cart />} />
           <Route path="/About" element={<About />} />
