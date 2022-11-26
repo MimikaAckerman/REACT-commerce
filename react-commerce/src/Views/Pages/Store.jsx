@@ -1,17 +1,13 @@
-import React from 'react'
-import '../../design/store.css'
+import React from "react";
+import "../../design/store.css";
+import ProductContainer from "../Components/ProductContainer/ProductContainer";
 
 const Store = () => {
   return (
-<>
-<h1>page Store</h1>
+    <>
+      <ProductContainer />
+    </>
+  );
+};
 
-<>
-   
-</>
-
-</>
-  )
-}
-
-export default Store
+export default Store;

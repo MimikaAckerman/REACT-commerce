@@ -5,7 +5,7 @@ import Home from "../Views/Pages/Home";
 import Cart from "../Views/Components/Cart/Cart";
 import About from "../Views/Pages/About";
 
-import ProductContainer from "../Views/Components/ProductContainer/ProductContainer";
+import Store from "../Views/Pages/Store";
  import Navbar from "./../Views/Layout/Navbar/Navbar"; 
 
 const AppRoutes = () => {
@@ -15,7 +15,7 @@ const AppRoutes = () => {
         <Navbar /> 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Store" element={<ProductContainer />} />
+          <Route path="/Store" element={<Store />} />
           <Route path="/Cart" element={<Cart />} />
           <Route path="/About" element={<About />} />
         </Routes>
