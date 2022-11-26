@@ -15,11 +15,11 @@ function App() {
 
   return (
     <>
-    <LoginContext.Provider value={[name,setName]} >
+  {/*   <LoginContext.Provider value={[name,setName]} > */}
       <AppRoutes/>
       
 
-      </LoginContext.Provider>             
+{/*       </LoginContext.Provider>        */}      
 
 
     </>
