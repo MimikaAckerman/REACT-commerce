@@ -1,28 +1,41 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
+import { Link ,useNavigate} from "react-router-dom";
 import "../../../design/Navbar.css";
 import { useCart } from "../../../context/cart-context";
-
+import { LoginContext } from "../../../context";
+import { useContext } from "react";
 
 
 const Navbar = () => {
   const { state } = useCart();
-  
+  const {user,logout} = useContext(LoginContext)
+  console.log(user)
+
+const navigate = useNavigate()
+
+  const onLogout = ()=>{
+    logout();
+
+    navigate('/', {
+      replace: true,
+    });
+  };
 
   return (
     <>
-     
+     <div className="container-user">
+        <h1 className="welcome-user">
+        {user ? `Welcome back, ${user.username}` : null}
+        </h1>
+        <div className="btn">
+        <button className="button_top" onClick={onLogout}>logout</button>
+
+        </div>
+        </div>
 
       <header>
-        {/*  <span>
-    {user ? `Welcome back, ${user.username}` : null}
-    </span>
     
-    <button  onClick={onLogout}>
-            Logout
-          </button>
- */}
 
         <div className="nav" id="one">
           <Link to="/">

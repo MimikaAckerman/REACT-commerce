@@ -1,8 +1,8 @@
 import React from "react";
-import "../../../design/RegisterStyle.css";
+
 /* import { useForm } from "./useFormRegister"; */
 import { useFormRegister } from "./useFormRegister";
-import "./../../../design/RegisterStyle.css";
+
 
 import { useState } from "react";
 import Button from "react-bootstrap/Button";

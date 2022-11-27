@@ -2,18 +2,8 @@ import React, { useState, useEffect } from "react";
 import { showItems } from "../../../Api/showItems";
 
 import Products from "../Products/Products";
-
-import "../../../design/productContainer.css";
-
+import './../../../design/ProductContainer.css'
 const ProductContainer = () => {
-
-  
-   
-
-
-  
-
-
   const [state, setState] = useState([]);
   const url = " http://localhost:8000/storeItems";
 
@@ -28,21 +18,21 @@ const ProductContainer = () => {
 
   return (
     <>
-      <div className="imgSlider">
-       
-          {state.map((xd) => (
-            <Products
-              key={xd.id }
-              id={xd.id }
-              name={xd.name}
-              price={xd.price}
-              img={xd.img}
-            />
-          ))}
-   
+      <div className="container">
+        {state.map((xd) => (
+          <Products
+            key={xd.id}
+            id={xd.id}
+            name={xd.name}
+            price={xd.price}
+           
+            img={xd.img}
+            
+          />
+        ))}
       </div>
     </>
   );
-          }
+};
 
 export default ProductContainer;
