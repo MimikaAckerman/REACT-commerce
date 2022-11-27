@@ -8,3 +8,13 @@
     border-radius: 10px;
     margin-left: 80vh;
 }
+.register-box{
+position: absolute;
+margin-top: 20vh;
+margin-left: 5vh;
+}
+.login-box{
+    position: absolute;
+margin-top: 20vh;
+margin-left: 33vh;
+}

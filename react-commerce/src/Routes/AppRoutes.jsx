@@ -7,7 +7,7 @@ import About from "../Views/Pages/About";
 
 import Store from "../Views/Pages/Store";
  import Navbar from "./../Views/Layout/Navbar/Navbar"; 
-import {PublicRoutes} from "./PublicRoutes";
+/* import {PublicRoutes} from "./PublicRoutes"; */
 import  PrivateRoutes  from "./PrivateRoutes";
 
 

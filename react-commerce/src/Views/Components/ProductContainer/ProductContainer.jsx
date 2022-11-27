@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { showItems } from "../../../Api/showItems";
 
 import Products from "../Products/Products";
-import './../../../design/ProductContainer.css'
+
 const ProductContainer = () => {
   const [state, setState] = useState([]);
   const url = " http://localhost:8000/storeItems";

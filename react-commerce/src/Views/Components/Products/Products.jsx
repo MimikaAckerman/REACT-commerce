@@ -7,15 +7,16 @@ const Products = (items) => {
 
   return (
     <>
-      <div id={items.id} className="container">
+  
+    <div id={items.id} className="container">
         <img src={items.img} alt={items.name} className="img-container" />
         
     
         <div className="information">
           <h1>{items.name}</h1>
           <h3>{items.price}</h3>
-<button
-        className="button-add"
+          <button
+        className="buttonAdd-products"
         onClick={() =>
           dispatch({
             type: "ADD_TO_CART",
@@ -23,12 +24,15 @@ const Products = (items) => {
           })
         }
       >
-        Add to cart
+        Add
       </button>
 
 
         </div>
+        
       </div>
+    
+     
 
       
     </>
