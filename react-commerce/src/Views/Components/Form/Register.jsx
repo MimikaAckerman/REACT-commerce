@@ -81,7 +81,7 @@ const Register = () => {
     <>
       <div className="btn-register">
         <Button variant="info" onClick={handleShow}>
-          Register User
+          Register
         </Button>
       </div>
 
