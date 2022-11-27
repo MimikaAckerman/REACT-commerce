@@ -60,10 +60,6 @@ const LoginPage = () => {
       console.log("unsuccessful");
     }
 
-    /* login("mimika ackerman");
-    useNavigate("/", {
-      replace: true,
-    }); */
   };
 
   const [show, setShow] = useState(false);

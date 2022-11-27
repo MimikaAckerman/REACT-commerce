@@ -1,12 +1,13 @@
 import React from "react";
-import Footer from "../Layout/Footer/Footer";
-
+import Register from './../../Views/Components/Form/Register'
+import LoginPage from "../Components/Form/LoginPage";
 const Home = () => {
   return (
     <>
     
       <div className="forms">
-        <Footer />
+      <Register/>
+      <LoginPage/>
 
 
       </div>
