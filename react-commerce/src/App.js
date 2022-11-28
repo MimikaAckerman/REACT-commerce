@@ -3,6 +3,7 @@ import "./App.css";
 
 import { LoginProvider } from "./context/LoginProvider";
 import AppRoutes from "./Routes/AppRoutes";
+import Search from "./Views/Components/Search/Search";
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
     <LoginProvider>
      
       <AppRoutes />
-
+    <Search/>
       
       </LoginProvider>
     </>
