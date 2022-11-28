@@ -14,7 +14,7 @@ const Products = (items) => {
     
         <div className="information">
           <h1>{items.name}</h1>
-          <h3>{items.price}</h3>
+          <h3>€{items.price}</h3>
           <button
         className="buttonAdd-products"
         onClick={() =>

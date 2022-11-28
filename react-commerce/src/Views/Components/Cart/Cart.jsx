@@ -14,7 +14,7 @@ const Cart = () => {
         <div key={itemsOfCart.id}>
           <p>Products: {itemsOfCart.name}</p>
           <p>quantity:{itemsOfCart.quant}</p>
-          <p>price: {itemsOfCart.price}</p>
+          <p>price: €{itemsOfCart.price}</p>
           <button
             onClick={() =>
               dispatch({
