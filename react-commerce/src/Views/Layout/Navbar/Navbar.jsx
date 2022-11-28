@@ -2,13 +2,13 @@ import React from "react";
 
 import { Link ,useNavigate} from "react-router-dom";
 import "../../../design/Navbar.css";
-import { useCart } from "../../../context/cart-context";
+
 import { LoginContext } from "../../../context";
 import { useContext } from "react";
 
 
 const Navbar = () => {
-  const { state } = useCart();
+ 
   const {user,logout} = useContext(LoginContext)
   console.log(user)
 
@@ -73,7 +73,7 @@ const navigate = useNavigate()
         <div className="nav" id="three">
           <Link to="/Cart">
             <div className="circulo">
-              <h2>{state.counter}</h2>
+             
             </div>
 
             <svg

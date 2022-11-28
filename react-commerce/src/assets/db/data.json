@@ -73,6 +73,14 @@
       "email": "koko@queso.com",
       "password": "1234",
       "confirmPassword": "1234"
+    },
+    {
+      "id": "5598397c-c96f-4a16-84d6-5d779989df64",
+      "username": "jose",
+      "lastname": "asambler",
+      "email": "joseAssambler@gmail.com",
+      "password": "12",
+      "confirmPassword": "12"
     }
   ]
 }

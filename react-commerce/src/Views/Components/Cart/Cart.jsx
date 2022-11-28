@@ -3,7 +3,7 @@ import { useCart } from "../../../context/cart-context";
 import './../../../design/cart.css'
 const Cart = () => {
   const { state, dispatch } = useCart();
-  console.log(state.productName);
+ 
 
   return (
     <div className="products-cart">
@@ -14,7 +14,7 @@ const Cart = () => {
         <div key={itemsOfCart.id}>
           <p>Products: {itemsOfCart.name}</p>
           <p>quantity:{itemsOfCart.quant}</p>
-          <p>price: €{itemsOfCart.price}</p>
+          <p>price: {itemsOfCart.price}</p>
           <button
             onClick={() =>
               dispatch({

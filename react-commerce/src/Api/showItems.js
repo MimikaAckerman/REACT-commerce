@@ -2,7 +2,7 @@ export const showItems = async (url) => {
   try {
     const response = await fetch(url)
     const data = await response.json()
-    console.log(data,'prueba1')
+/*     console.log(data,'prueba1') */
     return data
     
   } catch (error) {
