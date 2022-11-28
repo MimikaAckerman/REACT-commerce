@@ -65,7 +65,14 @@
       "email": "leviAckerman@gmail.com",
       "password": "12",
       "confirmPassword": "12"
+    },
+    {
+      "id": "0110ba87-78bc-412e-b4ae-fc7b0bba83e3",
+      "username": "koko",
+      "lastname": "kokoqueso",
+      "email": "koko@queso.com",
+      "password": "1234",
+      "confirmPassword": "12345"
     }
-    
   ]
 }

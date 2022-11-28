@@ -93,7 +93,7 @@ const LoginPage = () => {
           }
         />
         <input
-          type="text"
+          type="password"
           placeholder="enter your passsword"
           name="password"
           value={password}

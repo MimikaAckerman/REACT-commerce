@@ -50,18 +50,27 @@ const validationsForm = (form) => {
   if (!form.password.trim()) {
     errors.password = "please enter a password";
   } else if (!regexPassword.test(form.password.trim())) {
-  }
+  } 
+
+
+
+  
 
   //for confirmPassword
   if (!form.confirmPassword.trim()) {
     //campos vacios
     errors.confirmPassword = "your confirm password is empty";
-  }
-  if (form.confirmPassword.trim() === form.password.trim()) {
+  } 
+ if (form.confirmPassword.trim() === form.password.trim()) {
     errors.confirmPassword = "passwords match";
   } else {
     errors.confirmPassword = "passwords are different";
-  }
+    
+  } 
+
+
+  
+  
 
   return errors;
 };
@@ -71,6 +80,19 @@ const Register = () => {
     initialForm,
     validationsForm
   );
+
+ 
+    /* else {
+    errors.confirmPassword = "passwords are different";
+    window.location.replace("/");
+    
+  } */
+
+
+
+
+
+
 
   const [show, setShow] = useState(false);
 

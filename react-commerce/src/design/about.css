@@ -1,0 +1,14 @@
+.about-information{
+    height: 40vh;
+    width: 50vh;
+    margin-top: -15vh;
+    border-radius: 10px;
+    margin-left: 80vh;
+    background-image: linear-gradient( 108.9deg,  rgba(251,140,0,1) 11.2%, rgba(0,139,155,1) 88.9% );
+}
+p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+   text-align: center;
+   padding: 5vh;
+}
